@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upstream Relay — Fractional Developer Relations Firm, NYC</title>
+<meta name="description" content="Upstream Relay is a practitioner-owned developer relations firm in New York City. Fractional DevRel — strategy and execution — for enterprise tech companies and Series B+ startups. Book a 30-minute intro call.">
+<meta name="keywords" content="fractional devrel, developer relations consultancy, devrel as a service, developer community strategy, hackathon production, devrel firm nyc">
+<link rel="canonical" href="https://upstreamrelay.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Upstream Relay — Fractional Developer Relations, NYC">
+<meta property="og:description" content="A full DevRel function without the 18-month rebuild. Practitioner-owned. New York City.">
+<meta property="og:url" content="https://upstreamrelay.com/">
+<meta property="og:site_name" content="Upstream Relay">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Upstream Relay — Fractional Developer Relations, NYC">
+<meta name="twitter:description" content="A full DevRel function without the 18-month rebuild. Practitioner-owned.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Upstream Relay",
+  "description": "Practitioner-owned developer relations firm offering fractional DevRel, community strategy, and developer event production for enterprise technology companies and Series B+ startups.",
+  "url": "https://upstreamrelay.com/",
+  "email": "hello@upstreamrelay.com",
+  "address": {"@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY", "addressCountry": "US"},
+  "areaServed": "United States",
+  "knowsAbout": ["Developer Relations", "Developer Community", "Hackathons", "Developer Marketing", "Developer Experience"],
+  "makesOffer": [
+    {"@type": "Offer", "name": "RFC — DevRel Strategy Sprint", "description": "4–6 week audit and strategy engagement covering docs, onboarding, community, and the developer funnel."},
+    {"@type": "Offer", "name": "GA — Fractional DevRel", "description": "Senior practitioner embedded 2–3 days per week: strategy and execution on a monthly retainer."},
+    {"@type": "Offer", "name": "Scale — Embedded DevRel Team", "description": "Full-function DevRel replacement: fractional head of DevRel plus execution support."},
+    {"@type": "Offer", "name": "Mainstage — Event & Hackathon Production", "description": "Full production of hackathons, developer conferences, and innovation summits."}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What does fractional DevRel cost?", "acceptedAnswer": {"@type": "Answer", "text": "Every engagement is scoped to your goals, team, and timeline on the first call, and you get a written quote before any work starts. Retainers are sized so a senior fractional program costs meaningfully less than building the equivalent function in-house — and the number never changes without your written sign-off."}},
+    {"@type": "Question", "name": "How fast can an engagement start?", "acceptedAnswer": {"@type": "Answer", "text": "Strategy sprints typically kick off within two weeks of a signed scope. Embedded retainers start as soon as the kickoff practitioner is matched — usually two to four weeks."}},
+    {"@type": "Question", "name": "Does Upstream Relay replace hiring an in-house DevRel team?", "acceptedAnswer": {"@type": "Answer", "text": "For a while, deliberately. When you're ready to hire internally, we design the org, write the roles, and hand over the program. Success is you outgrowing us."}},
+    {"@type": "Question", "name": "Who actually does the work?", "acceptedAnswer": {"@type": "Answer", "text": "The person in your kickoff is the person doing your work — a senior practitioner who has held the role in-house, with principal oversight on every engagement. No handoff to a junior bench."}},
+    {"@type": "Question", "name": "Can you work with enterprise procurement?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We contract through an established LLC, support MSAs and security review, and can invoice on your procurement cycle."}}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   UPSTREAM RELAY — v4
+   v1's layout and energy, re-skinned for New York:
+   subway-map hero, MTA line-bullet service marks, taxi-yellow
+   CTAs, station-sign proof strip. No prices anywhere.
+   ============================================================ */
+:root{
+  --ink:#121212;          /* subway-sign black */
+  --ink-soft:#3D4247;     /* body on light */
+  --paper:#F7F6F1;        /* chalk */
+  --card:#FFFFFF;
+  --primary:#0039A6;      /* MTA A/C/E blue */
+  --primary-deep:#002B7A;
+  --signal:#FCCC0A;       /* taxi yellow — CTAs only */
+  --signal-hover:#EDBD00;
+  --line:#DBD9D0;
+  /* subway line colors for bullets & routes */
+  --l-yellow:#FCCC0A; --l-orange:#FF6319; --l-green:#00933C;
+  --l-gray:#808183;  --l-red:#EE352E;    --l-blue:#0039A6;
+  --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --display:'Bricolage Grotesque','Public Sans',system-ui,sans-serif;
+  --body:'Public Sans',system-ui,-apple-system,sans-serif;
+  --maxw:1120px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px}
+img,svg{max-width:100%;display:block}
+a{color:var(--primary)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.eyebrow{font-family:var(--mono);font-size:.8rem;letter-spacing:.04em;color:var(--primary);font-weight:500;display:block;margin-bottom:14px}
+h1,h2,h3{font-family:var(--display);line-height:1.12;letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:700;margin-bottom:14px}
+.section{padding:96px 0}
+.section-intro{max-width:640px;color:var(--ink-soft);margin-bottom:56px}
+:focus-visible{outline:3px solid var(--primary);outline-offset:3px;border-radius:2px}
+::selection{background:var(--signal)}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:10px 16px;z-index:99}
+.skip:focus{left:12px;top:12px}
+
+/* ===== line bullets (MTA-style) ===== */
+.bullet{width:38px;height:38px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:1.15rem;color:#fff;flex:none}
+.bullet.r{background:var(--l-yellow);color:var(--ink)}
+.bullet.b{background:var(--l-orange)}
+.bullet.g{background:var(--l-green)}
+.bullet.s{background:var(--l-gray)}
+.bullet.m{background:var(--l-red)}
+.bullet.o{background:var(--l-blue)}
+
+/* ===== Nav ===== */
+.nav{position:sticky;top:0;z-index:50;background:rgba(247,246,241,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--display);font-weight:800;font-size:1.15rem}
+.logo svg{width:26px;height:26px}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--ink-soft);font-size:.92rem;font-weight:500}
+.nav-links a:hover{color:var(--primary)}
+.btn{display:inline-block;font-family:var(--body);font-weight:700;font-size:.95rem;text-decoration:none;border-radius:8px;padding:14px 26px;transition:transform .15s ease,background .15s ease;cursor:pointer;border:none;min-height:44px}
+.btn-signal{background:var(--signal);color:var(--ink)}
+.btn-signal:hover{background:var(--signal-hover);transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.nav .btn{padding:10px 18px;font-size:.88rem}
+.microcopy{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft)}
+
+/* ===== Hero ===== */
+.hero{position:relative;padding:110px 0 150px;overflow:hidden}
+.hero-map{position:absolute;inset:auto 0 0 0;width:100%;height:230px;pointer-events:none}
+.hero h1{font-size:clamp(2.3rem,5.4vw,3.7rem);font-weight:800;max-width:14em;margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--primary)}
+.hero p.lede{font-size:1.16rem;color:var(--ink-soft);max-width:38em;margin-bottom:34px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+.softcta{font-weight:600;font-size:.95rem}
+
+/* ===== Proof strip: station sign ===== */
+.proof{background:var(--ink);color:#E9E7DE;padding:0 0 34px;border-top:6px solid var(--signal)}
+.proof .sign{font-family:var(--display);font-weight:800;color:#fff;font-size:1.05rem;padding:18px 0 22px;display:flex;align-items:center;gap:12px}
+.proof .sign .bullet{width:30px;height:30px;font-size:.95rem}
+.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.proof-item strong{display:block;font-family:var(--display);font-size:1.7rem;font-weight:700;color:#fff;line-height:1.1}
+.proof-item span{font-size:.85rem;color:#A8ACA6}
+
+/* ===== Audience ===== */
+.aud-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.aud-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:36px;border-top:6px solid var(--primary)}
+.aud-card+.aud-card{border-top-color:var(--l-green)}
+.aud-card h3{font-size:1.28rem;font-weight:700;margin:14px 0 12px}
+.aud-card p{color:var(--ink-soft);font-size:.98rem;margin-bottom:14px}
+.aud-tag{font-family:var(--mono);font-size:.75rem;font-weight:600;color:var(--primary);background:#E4EAF6;border-radius:99px;padding:5px 12px;display:inline-block}
+.aud-card+.aud-card .aud-tag{color:var(--l-green);background:#E3F1E7}
+.aud-card ul{list-style:none;margin-top:6px}
+.aud-card li{padding-left:24px;position:relative;font-size:.95rem;color:var(--ink-soft);margin-bottom:9px}
+.aud-card li::before{content:"→";position:absolute;left:0;color:var(--primary);font-weight:700}
+
+/* ===== Services / route ===== */
+.services{background:linear-gradient(180deg,var(--paper) 0%,#EFEEE7 100%)}
+.track{position:relative;padding-left:38px}
+.track::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:6px;border-radius:3px;background:var(--primary)}
+.svc{position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px 34px;margin-bottom:22px;transition:transform .15s ease,box-shadow .15s ease}
+.svc:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(18,18,18,.10)}
+.svc::before{content:"";position:absolute;left:-33px;top:38px;width:14px;height:14px;border-radius:50%;background:#fff;border:3.5px solid var(--ink)}
+.svc.flagship{border:2px solid var(--primary)}
+.svc-head{display:flex;gap:18px;align-items:flex-start;margin-bottom:10px}
+.svc-title h3{font-size:1.22rem;font-weight:700}
+.svc-tag{font-family:var(--mono);font-size:.72rem;font-weight:600;color:var(--primary);letter-spacing:.05em;display:block;margin-bottom:4px}
+.svc-meta{font-family:var(--mono);font-size:.82rem;font-weight:600;color:var(--ink-soft);margin-top:4px}
+.svc p{color:var(--ink-soft);font-size:.96rem;max-width:52em}
+.svc .outcome{margin-top:10px;color:var(--ink)}
+.svc .svc-cta{display:inline-block;margin-top:14px;font-weight:700;font-size:.92rem;text-decoration:none;border-bottom:2px solid var(--signal)}
+.svc .svc-cta:hover{border-bottom-width:3px}
+.flag-chip{font-family:var(--mono);font-size:.7rem;font-weight:600;background:var(--signal);color:var(--ink);border-radius:4px;padding:3px 8px;vertical-align:middle;margin-left:8px}
+
+/* ===== Process ===== */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.step{border-top:6px solid var(--primary);padding-top:20px;border-radius:2px}
+.step:nth-child(2){border-top-color:var(--l-orange)}
+.step:nth-child(3){border-top-color:var(--l-green)}
+.step .n{font-family:var(--mono);font-size:.8rem;color:var(--ink-soft);font-weight:600;display:block;margin-bottom:8px}
+.step h3{font-size:1.1rem;margin-bottom:8px}
+.step p{color:var(--ink-soft);font-size:.94rem}
+
+/* ===== Commitments ===== */
+.commit-section{background:var(--ink);color:#E9E7DE;border-top:6px solid var(--signal)}
+.commit-section h2{color:#fff}
+.commit-section .section-intro{color:#A8ACA6}
+.commit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.commit{border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:26px}
+.commit h3{font-size:1.02rem;color:#fff;margin-bottom:8px}
+.commit p{font-size:.9rem;color:#A8ACA6}
+.commit .k{font-family:var(--mono);font-size:.72rem;color:var(--signal);display:block;margin-bottom:10px;letter-spacing:.05em}
+
+/* ===== FAQ ===== */
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:14px;padding:0 24px}
+.faq summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:1.02rem;padding:20px 30px 20px 0;list-style:none;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:0;top:15px;font-weight:800;font-size:1.4rem;color:var(--primary)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 0 22px;font-size:.95rem;color:var(--ink-soft);max-width:62ch}
+
+/* ===== Founding cohort ===== */
+.cohort{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:44px;display:grid;grid-template-columns:1.5fr 1fr;gap:36px;align-items:center;border-left:10px solid var(--signal)}
+.cohort h2{font-size:1.7rem}
+.cohort p{color:var(--ink-soft);font-size:.98rem}
+.cohort-cta{text-align:center}
+.cohort-cta .seats{font-family:var(--mono);font-size:.8rem;color:var(--ink-soft);display:block;margin-top:12px}
+
+/* ===== Contact ===== */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact-info p{color:var(--ink-soft);margin-bottom:20px}
+.contact-line{font-family:var(--mono);font-size:.95rem;margin-bottom:10px}
+.contact-line a{color:var(--primary);text-decoration:none;font-weight:600}
+.contact-line a:hover{text-decoration:underline}
+form{display:grid;gap:14px}
+label{font-size:.85rem;font-weight:600}
+input,textarea{font-family:var(--body);font-size:.95rem;padding:12px 14px;border:1.5px solid var(--line);border-radius:8px;background:var(--card);width:100%;color:var(--ink)}
+input:focus,textarea:focus{border-color:var(--primary);outline:none}
+.form-note{font-size:.78rem;color:var(--ink-soft)}
+
+/* ===== Footer ===== */
+footer{background:var(--ink);color:#A8ACA6;padding:40px 0;font-size:.85rem;border-top:6px solid var(--signal)}
+.foot-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer a{color:#E9E7DE;text-decoration:none}
+footer a:hover{text-decoration:underline}
+.foot-mono{font-family:var(--mono);font-size:.75rem}
+
+/* ===== Motion ===== */
+.draw{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.2s ease forwards}
+.draw.d2{animation-delay:.4s}
+.draw.d3{animation-delay:.8s}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .draw{animation:none;stroke-dashoffset:0}
+  .btn,.svc{transition:none}
+}
+
+/* ===== Responsive ===== */
+@media (max-width:880px){
+  .section{padding:64px 0}
+  .proof-grid{grid-template-columns:repeat(2,1fr)}
+  .aud-grid,.steps,.commit-grid,.contact-grid,.cohort{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .hero{padding:70px 0 140px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#top">Skip to content</a>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="#top" aria-label="Upstream Relay home">
+      <svg viewBox="0 0 26 26" fill="none" aria-hidden="true">
+        <path d="M4 22 V10 a6 6 0 0 1 6-6 h12" stroke="#0039A6" stroke-width="3" stroke-linecap="round"/>
+        <path d="M17 14 L22 9 L17 4" stroke="#0039A6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <circle cx="4" cy="22" r="3.5" fill="#FCCC0A"/>
+      </svg>
+      Upstream Relay
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">How it works</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#commitments">Commitments</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-signal" href="#contact">Book my intro call</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="wrap">
+    <span class="eyebrow">$ git merge upstream/devrel</span>
+    <h1 id="hero-h">A full developer relations function, <em>without the 18-month rebuild.</em></h1>
+    <p class="lede">Upstream Relay is a practitioner-owned DevRel firm in New York City. We embed senior developer-relations people into enterprise tech companies and Series B+ startups — strategy and execution, from first audit to flagship hackathon.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-signal" href="#contact">Book my 30-minute intro call</a>
+      <a class="softcta" href="#process">Not ready? See how an engagement runs →</a>
+    </div>
+    <span class="microcopy">// 30 minutes, no deck, no obligation — you'll leave with a straight answer, including what it costs</span>
+  </div>
+  <svg class="hero-map" viewBox="0 0 1200 230" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <!-- main line: MTA blue -->
+    <path class="draw" d="M-20 165 H1220" stroke="#0039A6" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <!-- yellow branch -->
+    <path class="draw d2" d="M180 165 L250 165 Q270 165 284 151 L330 105 Q344 91 364 91 L470 91 Q490 91 504 105 L550 151 Q564 165 584 165 L640 165" stroke="#FCCC0A" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <!-- green branch -->
+    <path class="draw d3" d="M680 165 L740 165 Q760 165 774 151 L830 95 Q844 81 864 81 L960 81 Q980 81 994 95 L1050 151 Q1064 165 1084 165 L1140 165" stroke="#00933C" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <!-- stations: white dots with black ring, transit-map style -->
+    <g fill="#fff" stroke="#121212" stroke-width="3.5">
+      <circle cx="120" cy="165" r="8"/>
+      <circle cx="417" cy="91" r="8"/>
+      <circle cx="640" cy="165" r="8"/>
+      <circle cx="912" cy="81" r="8"/>
+      <circle cx="1140" cy="165" r="8"/>
+    </g>
+    <g font-family="IBM Plex Mono,monospace" font-size="11.5" fill="#3D4247">
+      <text x="92" y="196">intro call</text>
+      <text x="382" y="70">RFC audit</text>
+      <text x="606" y="196">GA launch</text>
+      <text x="868" y="60">first event</text>
+      <text x="1096" y="196">LTS support</text>
+    </g>
+  </svg>
+</section>
+
+<!-- ===================== PROOF STRIP: station sign ===================== -->
+<section class="proof" aria-label="Track record">
+  <div class="wrap">
+    <div class="sign"><span class="bullet g" aria-hidden="true">✓</span> The record — programs we personally built and ran</div>
+    <div class="proof-grid">
+      <div class="proof-item"><strong>5,000+</strong><span>member developer community built and scaled</span></div>
+      <div class="proof-item"><strong>700+</strong><span>registrations at our flagship developer conference</span></div>
+      <div class="proof-item"><strong>550</strong><span>registrations for a single-day innovation summit</span></div>
+      <div class="proof-item"><strong>48-hour</strong><span>enterprise-sponsored hackathon, community-run end to end</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AUDIENCE ===================== -->
+<section class="section" aria-labelledby="aud-h">
+  <div class="wrap">
+    <span class="eyebrow">// who we work with</span>
+    <h2 id="aud-h">Built for two moments in a company's life.</h2>
+    <p class="section-intro">Developer relations gets cut when it isn't measured, and rebuilt when the pipeline dries up. We meet you at either point — with the same senior team.</p>
+    <div class="aud-grid">
+      <article class="aud-card">
+        <span class="aud-tag">ENTERPRISE</span>
+        <h3>Rebuilding after the cuts</h3>
+        <p>The industry gutted DevRel three years ago and is reinvesting now. Rebuilding in-house means 12–18 months of hiring, ramp, and org design before a single developer notices. We compress that to weeks.</p>
+        <ul>
+          <li>A working program in the first quarter, not the first year</li>
+          <li>Executive reporting your leadership can actually evaluate</li>
+          <li>Continuity that survives your next reorg</li>
+        </ul>
+      </article>
+      <article class="aud-card">
+        <span class="aud-tag">SERIES B+</span>
+        <h3>Scaling developer adoption</h3>
+        <p>Developers are your buyers, but senior DevRel talent is scarce, expensive to recruit, and slow to ramp — and a junior hire spends your credibility while they learn. Get the seniority fractionally, and only build in-house when revenue demands it.</p>
+        <ul>
+          <li>Senior practitioners from day one, no junior learning curve</li>
+          <li>Community pipeline handed to sales in a form they can close</li>
+          <li>A hiring roadmap for when you're ready to bring it in-house</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="section services" id="services" aria-labelledby="svc-h">
+  <div class="wrap">
+    <span class="eyebrow">// services</span>
+    <h2 id="svc-h">Six ways to engage, named the way software ships.</h2>
+    <p class="section-intro">Every engagement follows the release lifecycle: start with an RFC, ship to GA, stay on long-term support. Each one is scoped on the intro call and quoted in writing before any work starts.</p>
+
+    <div class="track">
+      <article class="svc">
+        <div class="svc-head">
+          <span class="bullet r" aria-hidden="true">R</span>
+          <div class="svc-title">
+            <span class="svc-tag">01 · STRATEGY SPRINT</span>
+            <h3>RFC — DevRel Strategy Sprint</h3>
+            <div class="svc-meta">fixed scope · 4–6 weeks</div>
+          </div>
+        </div>
+        <p>A request-for-comments on your entire developer motion. We audit docs, onboarding, community channels, and event presence, then deliver a written strategy, a 12-month roadmap, a build-vs-outsource recommendation, and a metrics framework that goes beyond lead-score theater.</p>
+        <p class="outcome"><strong>You walk away with:</strong> a board-ready plan you own, whether or not you retain us.</p>
+        <a class="svc-cta" href="#contact">Scope an RFC sprint →</a>
+      </article>
+
+      <article class="svc">
+        <div class="svc-head">
+          <span class="bullet b" aria-hidden="true">B</span>
+          <div class="svc-title">
+            <span class="svc-tag">02 · STRATEGY RETAINER</span>
+            <h3>Beta — Community Strategy</h3>
+            <div class="svc-meta">monthly retainer · your team executes</div>
+          </div>
+        </div>
+        <p>Senior direction for your existing team: community architecture, content calendar, event and sponsorship strategy, ambassador program design. Your people execute; we set the course and review the work.</p>
+        <p class="outcome"><strong>You walk away with:</strong> a junior team performing like it has a senior lead — because it does.</p>
+        <a class="svc-cta" href="#contact">Ask about Beta →</a>
+      </article>
+
+      <article class="svc flagship">
+        <div class="svc-head">
+          <span class="bullet g" aria-hidden="true">G</span>
+          <div class="svc-title">
+            <span class="svc-tag">03 · FLAGSHIP</span>
+            <h3>GA — Fractional DevRel<span class="flag-chip">MOST POPULAR</span></h3>
+            <div class="svc-meta">monthly retainer · 2–3 day/week equivalent</div>
+          </div>
+        </div>
+        <p>A senior practitioner embedded in your team, with principal oversight — strategy and execution. Technical content, community programs, developer events, docs feedback loops, and the piece most programs miss: community-built pipeline handed to your sales team packaged so they can close it.</p>
+        <p class="outcome"><strong>You walk away with:</strong> a full DevRel function at a fraction of the cost of building one.</p>
+        <a class="svc-cta" href="#contact">Start with GA →</a>
+      </article>
+
+      <article class="svc">
+        <div class="svc-head">
+          <span class="bullet s" aria-hidden="true">S</span>
+          <div class="svc-title">
+            <span class="svc-tag">04 · FULL FUNCTION</span>
+            <h3>Scale — Embedded DevRel Team</h3>
+            <div class="svc-meta">custom scope · full-function coverage</div>
+          </div>
+        </div>
+        <p>A fractional head of DevRel plus execution support: full-function replacement for enterprises reinvesting after cuts, or later-stage startups that need a program running yesterday. Includes quarterly executive reporting built for leadership teams that need DevRel to be measurable.</p>
+        <p class="outcome"><strong>You walk away with:</strong> the org you would have hired, working in week three instead of month twelve.</p>
+        <a class="svc-cta" href="#contact">Talk through Scale →</a>
+      </article>
+
+      <article class="svc">
+        <div class="svc-head">
+          <span class="bullet m" aria-hidden="true">M</span>
+          <div class="svc-title">
+            <span class="svc-tag">05 · À LA CARTE</span>
+            <h3>Mainstage — Hackathon &amp; Event Production</h3>
+            <div class="svc-meta">per event · standalone or add-on</div>
+          </div>
+        </div>
+        <p>Full production of hackathons, developer conferences, and innovation summits — challenge design aligned to sponsor goals, volunteer operations, and a post-event conversion playbook so the leads generated actually reach revenue. Built on events that drew 700+ registrations and put enterprise VPs in the room.</p>
+        <p class="outcome"><strong>You walk away with:</strong> an event developers talk about — and a pipeline your sales team can work.</p>
+        <a class="svc-cta" href="#contact">Plan an event →</a>
+      </article>
+
+      <article class="svc">
+        <div class="svc-head">
+          <span class="bullet o" aria-hidden="true">O</span>
+          <div class="svc-title">
+            <span class="svc-tag">06 · LIGHT-TOUCH</span>
+            <h3>Office Hours — Advisory &amp; Workshops</h3>
+            <div class="svc-meta">hourly or monthly block</div>
+          </div>
+        </div>
+        <p>Executive advisory, DevRel hiring support, workshop delivery, and investor/foundation education on developer ecosystems. The right door when you're not ready for a retainer.</p>
+        <p class="outcome"><strong>You walk away with:</strong> senior judgment on demand, without a program commitment.</p>
+        <a class="svc-cta" href="#contact">Book office hours →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCESS ===================== -->
+<section class="section" id="process" aria-labelledby="proc-h">
+  <div class="wrap">
+    <span class="eyebrow">// how it works</span>
+    <h2 id="proc-h">From intro call to shipped program in three moves.</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="n">STEP 1 — WEEK 0</span>
+        <h3>Intro call</h3>
+        <p>Thirty minutes with a partner, not an SDR. You describe your developer motion and goals; we tell you honestly whether fractional DevRel fits, which engagement to start with, and what it costs — with a written quote before anything kicks off.</p>
+      </div>
+      <div class="step">
+        <span class="n">STEP 2 — WEEKS 1–6</span>
+        <h3>RFC sprint or direct start</h3>
+        <p>Most clients begin with the RFC sprint: a fixed-scope audit and roadmap you own regardless of what happens next. Teams with an urgent mandate go straight to a GA retainer; we'll tell you which you are.</p>
+      </div>
+      <div class="step">
+        <span class="n">STEP 3 — ONGOING</span>
+        <h3>Embedded delivery</h3>
+        <p>Your practitioner joins your channels, ships against the roadmap, and reports monthly on developer-journey metrics and pipeline handed to sales — not vanity numbers. The person in the kickoff is the person doing your work.</p>
+      </div>
+    </div>
+    <p style="margin-top:44px"><a class="btn btn-signal" href="#contact">Book my intro call</a></p>
+  </div>
+</section>
+
+<!-- ===================== COMMITMENTS ===================== -->
+<section class="section commit-section" id="commitments" aria-labelledby="com-h">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#FCCC0A">// our commitments</span>
+    <h2 id="com-h">Practitioner-owned, and it shows.</h2>
+    <p class="section-intro">Upstream Relay exists because DevRel deserves what design got with the great independent studios: a partner-led firm owned by the people who do the work.</p>
+    <div class="commit-grid">
+      <div class="commit"><span class="k">01 / OWNERSHIP</span><h3>Partner-led, practitioner-owned</h3><p>Every engagement is run by someone who has held the role — not account-managed it from a distance.</p></div>
+      <div class="commit"><span class="k">02 / HIRING</span><h3>One hire per four clients</h3><p>For every four retained clients, we hire a full-time practitioner — prioritizing advocates displaced by industry restructurings.</p></div>
+      <div class="commit"><span class="k">03 / COST</span><h3>Straight answers on cost</h3><p>You hear a number on the first call and see it in writing before work starts. It never changes without your sign-off.</p></div>
+      <div class="commit"><span class="k">04 / COMMUNITY</span><h3>Revenue reinvested</h3><p>A fixed percentage of revenue sponsors community-run, vendor-neutral developer events every year.</p></div>
+      <div class="commit"><span class="k">05 / METRICS</span><h3>No vanity numbers</h3><p>Reporting is built around the developer journey and the quality of pipeline handed to sales — not MQL scores.</p></div>
+      <div class="commit"><span class="k">06 / EXIT-FRIENDLY</span><h3>We build your in-house team</h3><p>When you're ready to hire internally, we design the org, write the roles, and hand over the program. Success is you outgrowing us.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section faq" id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <span class="eyebrow">// faq</span>
+    <h2 id="faq-h">Questions buyers actually ask.</h2>
+    <p class="section-intro">Straight answers, so the intro call can go straight to your situation.</p>
+    <details>
+      <summary>What does fractional DevRel cost?</summary>
+      <p>Every engagement is scoped to your goals, team, and timeline on the first call, and you get a written quote before any work starts. Retainers are sized so a senior fractional program costs meaningfully less than building the equivalent function in-house — and the number never changes without your written sign-off.</p>
+    </details>
+    <details>
+      <summary>How fast can an engagement start?</summary>
+      <p>Strategy sprints typically kick off within two weeks of a signed scope. Embedded retainers start as soon as the kickoff practitioner is matched — usually two to four weeks.</p>
+    </details>
+    <details>
+      <summary>Does this replace hiring an in-house team?</summary>
+      <p>For a while, deliberately. When you're ready to hire internally, we design the org, write the roles, and hand over the program. Success is you outgrowing us — it's commitment 06.</p>
+    </details>
+    <details>
+      <summary>Who actually does the work?</summary>
+      <p>The person in your kickoff is the person doing your work — a senior practitioner who has held the role in-house, with principal oversight on every engagement. No handoff to a junior bench after the contract is signed.</p>
+    </details>
+    <details>
+      <summary>Can you work with enterprise procurement?</summary>
+      <p>Yes. We contract through an established LLC, support MSAs and security review, and can invoice on your procurement cycle. Bring your legal team; we've met them before.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ===================== FOUNDING COHORT ===================== -->
+<section class="section" aria-labelledby="cohort-h">
+  <div class="wrap">
+    <div class="cohort">
+      <div>
+        <span class="eyebrow">// founding cohort</span>
+        <h2 id="cohort-h">Five founding seats, locked for six months.</h2>
+        <p>Our first five clients get founding terms in exchange for a case study, a logo, and a referenceable quote. When the seats are filled, standard terms apply. That's the whole deal — no countdown timers.</p>
+      </div>
+      <div class="cohort-cta">
+        <a class="btn btn-signal" href="#contact">Ask about a founding seat</a>
+        <span class="seats">// seats remaining: 5 of 5</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="section" id="contact" aria-labelledby="con-h" style="padding-top:48px">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <span class="eyebrow">// contact</span>
+      <h2 id="con-h">Start with thirty minutes.</h2>
+      <p>Tell us where your developer motion stands. We'll tell you what we'd do first, what it costs, and whether we're the right fit — on the first call.</p>
+      <p class="contact-line">email → <a href="mailto:hello@upstreamrelay.com">hello@upstreamrelay.com</a></p>
+      <p class="contact-line">based in → New York City · working everywhere</p>
+      <p class="contact-line">next → a partner replies within one business day with times for a call</p>
+    </div>
+    <form action="mailto:hello@upstreamrelay.com" method="post" enctype="text/plain" aria-label="Book an intro call">
+      <div><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+      <div><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+      <div><label for="f-msg">What's going on with your developer motion?</label><textarea id="f-msg" name="message" rows="3" placeholder="A sentence or two is plenty."></textarea></div>
+      <button class="btn btn-signal" type="submit">Book my intro call</button>
+      <p class="form-note">Three fields, on purpose — everything else we'll cover on the call. A partner reads every message. No newsletter, no drip sequence.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap foot-inner">
+    <div>
+      <strong style="color:#fff;font-family:var(--display)">Upstream Relay</strong><br>
+      Fractional developer relations, practitioner-owned.
+    </div>
+    <div class="foot-mono">
+      <a href="mailto:hello@upstreamrelay.com">hello@upstreamrelay.com</a><br>
+      New York, NY · © 2026 Upstream Relay · operated by Nebula LLC
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
