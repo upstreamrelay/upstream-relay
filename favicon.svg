@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" role="img" aria-label="Upstream Relay">
+  <path d="M4 22 V10 a6 6 0 0 1 6-6 h12" stroke="#0039A6" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M17 14 L22 9 L17 4" stroke="#0039A6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="4" cy="22" r="3.5" fill="#FCCC0A"/>
+</svg>
