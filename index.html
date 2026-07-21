@@ -135,11 +135,12 @@ h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:700;margin-bottom:14px}
 .microcopy{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft)}
 
 /* ===== Hero ===== */
-.hero{position:relative;padding:110px 0 150px;overflow:hidden}
+.hero{position:relative;padding:110px 0 280px;overflow:hidden}
 .hero-map{position:absolute;inset:auto 0 0 0;width:100%;height:230px;pointer-events:none}
 .hero h1{font-size:clamp(2.3rem,5.4vw,3.7rem);font-weight:800;max-width:14em;margin-bottom:22px}
 .hero h1 em{font-style:normal;color:var(--primary)}
 .hero p.lede{font-size:1.16rem;color:var(--ink-soft);max-width:38em;margin-bottom:34px}
+.hero .microcopy{display:block;margin-bottom:22px}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
 .softcta{font-weight:600;font-size:.95rem}
 
@@ -257,7 +258,7 @@ footer a:hover{text-decoration:underline}
   .proof-grid{grid-template-columns:repeat(2,1fr)}
   .aud-grid,.steps,.commit-grid,.contact-grid,.cohort,.cohort-cols{grid-template-columns:1fr}
   .nav-links{display:none}
-  .hero{padding:70px 0 140px}
+  .hero{padding:70px 0 280px}
 }
 </style>
 </head>
@@ -295,11 +296,11 @@ footer a:hover{text-decoration:underline}
     <span class="eyebrow">$ git merge upstream/devrel</span>
     <h1 id="hero-h">A full developer relations function, <em>without the 18-month rebuild.</em></h1>
     <p class="lede">Upstream Relay is a practitioner-owned DevRel firm in New York City. We embed senior developer-relations people into enterprise tech companies and Series B+ startups — strategy and execution, from first audit to flagship hackathon.</p>
+    <span class="microcopy">// 30 minutes, no deck, no obligation — you'll leave with a straight answer, including what it costs</span>
     <div class="hero-ctas">
       <a class="btn btn-signal" href="#contact">Book my 30-minute intro call</a>
       <a class="softcta" href="#process">Not ready? See how an engagement runs →</a>
     </div>
-    <span class="microcopy">// 30 minutes, no deck, no obligation — you'll leave with a straight answer, including what it costs</span>
   </div>
   <svg class="hero-map" viewBox="0 0 1200 230" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
     <!-- main line: MTA blue -->
