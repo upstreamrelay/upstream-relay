@@ -86,7 +86,7 @@
   --signal-hover:#EDBD00;
   --line:#DBD9D0;
   /* subway line colors for bullets & routes */
-  --l-yellow:#FCCC0A; --l-orange:#FF6319; --l-green:#00933C; --l-green-deep:#007530;
+  --l-yellow:#FCCC0A; --l-orange:#FF6319; --l-orange-deep:#9C3D00; --l-green:#00933C; --l-green-deep:#007530;
   --l-gray:#808183;  --l-red:#EE352E;    --l-blue:#0039A6;
   --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
   --display:'Bricolage Grotesque','Public Sans',system-ui,sans-serif;
@@ -153,16 +153,19 @@ h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:700;margin-bottom:14px}
 .proof-item span{font-size:.85rem;color:#A8ACA6}
 
 /* ===== Audience ===== */
-.aud-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.aud-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px}
 .aud-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:36px;border-top:6px solid var(--primary)}
-.aud-card+.aud-card{border-top-color:var(--l-green)}
+.aud-card:nth-child(2){border-top-color:var(--l-green)}
+.aud-card:nth-child(3){border-top-color:var(--l-orange)}
 .aud-card h3{font-size:1.28rem;font-weight:700;margin:14px 0 12px}
 .aud-card p{color:var(--ink-soft);font-size:.98rem;margin-bottom:14px}
 .aud-tag{font-family:var(--mono);font-size:.75rem;font-weight:600;color:var(--primary);background:#E4EAF6;border-radius:99px;padding:5px 12px;display:inline-block}
-.aud-card+.aud-card .aud-tag{color:var(--l-green-deep);background:#E3F1E7}
+.aud-card:nth-child(2) .aud-tag{color:var(--l-green-deep);background:#E3F1E7}
+.aud-card:nth-child(3) .aud-tag{color:var(--l-orange-deep);background:#FBEBE0}
 .aud-card ul{list-style:none;margin-top:6px}
 .aud-card li{padding-left:24px;position:relative;font-size:.95rem;color:var(--ink-soft);margin-bottom:9px}
 .aud-card li::before{content:"→";position:absolute;left:0;color:var(--primary);font-weight:700}
+.aud-card .softcta{display:inline-block;margin-top:6px}
 
 /* ===== Services / route ===== */
 .services{background:linear-gradient(180deg,var(--paper) 0%,#EFEEE7 100%)}
@@ -279,9 +282,10 @@ footer a:hover{text-decoration:underline}
     <nav aria-label="Primary">
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
-        <li><a href="#process">How it works</a></li>
+        <li><a href="#how-we-work">How we work</a></li>
+        <li><a href="#our-commitments">Our commitments</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#commitments">Commitments</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <a class="btn btn-signal" href="#contact">Book my intro call</a>
@@ -299,7 +303,7 @@ footer a:hover{text-decoration:underline}
     <span class="microcopy">// 30 minutes, no deck, no obligation — you'll leave with a straight answer, including what it costs</span>
     <div class="hero-ctas">
       <a class="btn btn-signal" href="#contact">Book my 30-minute intro call</a>
-      <a class="softcta" href="#process">Not ready? See how an engagement runs →</a>
+      <a class="softcta" href="#how-we-work">Not ready? See how an engagement runs →</a>
     </div>
   </div>
   <svg class="hero-map" viewBox="0 0 1200 230" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
@@ -380,8 +384,8 @@ footer a:hover{text-decoration:underline}
 <section class="section" aria-labelledby="aud-h">
   <div class="wrap">
     <span class="eyebrow">// who we work with</span>
-    <h2 id="aud-h">Built for two moments in a company's life.</h2>
-    <p class="section-intro">Developer relations gets cut when it isn't measured, and rebuilt when the pipeline dries up. We meet you at either point — with the same senior team.</p>
+    <h2 id="aud-h">Two kinds of companies. One home for practitioners.</h2>
+    <p class="section-intro">Developer relations gets cut when it isn't measured, and rebuilt when the pipeline dries up. We meet companies at either point — and give the practitioners displaced by that same cycle a bench to land on, all under one senior standard.</p>
     <div class="aud-grid">
       <article class="aud-card">
         <span class="aud-tag">ENTERPRISE</span>
@@ -403,6 +407,17 @@ footer a:hover{text-decoration:underline}
           <li>A hiring roadmap for when you're ready to bring it in-house</li>
         </ul>
       </article>
+      <article class="aud-card">
+        <span class="aud-tag">PRACTITIONERS</span>
+        <h3>Join the bench</h3>
+        <p>Upstream Relay runs on senior practitioners — and as clients retain us, we contract developer advocates to execute the work, prioritizing advocates displaced by the industry's restructurings. For every four retained clients, we hire one full-time.</p>
+        <ul>
+          <li>Contract execution work on real programs, not content-mill tickets</li>
+          <li>A path to full-time as the client roster grows</li>
+          <li>Founding-era input on how a practitioner-owned firm should run</li>
+        </ul>
+        <a class="softcta" href="#contact">Join the bench →</a>
+      </article>
     </div>
   </div>
 </section>
@@ -412,7 +427,7 @@ footer a:hover{text-decoration:underline}
   <div class="wrap">
     <span class="eyebrow">// services</span>
     <h2 id="svc-h">Six ways to engage, named the way software ships.</h2>
-    <p class="section-intro">Every engagement follows the release lifecycle: start with an RFC, ship to GA, stay on long-term support. Each one is scoped on the intro call and quoted in writing before any work starts.</p>
+    <p class="section-intro">Every engagement follows the release lifecycle — RFC (Request for Comments), Beta, GA (Generally Available): start with the plan, ship to execution, stay on long-term support. Each one is scoped on the intro call and quoted in writing before any work starts.</p>
 
     <div class="track">
       <article class="svc">
@@ -424,7 +439,7 @@ footer a:hover{text-decoration:underline}
             <div class="svc-meta">fixed scope · 4–6 weeks</div>
           </div>
         </div>
-        <p>A request-for-comments on your entire developer motion. We audit docs, onboarding, developer experience, community channels, and event presence, then deliver a written strategy, a 12-month roadmap, a build-vs-outsource recommendation, and a metrics framework that goes beyond lead-score theater.</p>
+        <p>A Request for Comments on your entire developer motion — the plan, not the execution. We audit docs, onboarding, developer experience, community channels, and event presence, then deliver a written strategy, a 12-month roadmap, a build-vs-outsource recommendation, and a metrics framework that goes beyond lead-score theater.</p>
         <p class="outcome"><strong>You walk away with:</strong> a board-ready plan you own, whether or not you retain us.</p>
         <a class="svc-cta" href="#contact">Scope an RFC sprint →</a>
       </article>
@@ -452,7 +467,7 @@ footer a:hover{text-decoration:underline}
             <div class="svc-meta">monthly retainer · 2–3 day/week equivalent</div>
           </div>
         </div>
-        <p>A senior practitioner embedded in your team, with principal oversight — strategy and execution. Technical content, community programs, developer events, docs feedback loops, and the piece most programs miss: community-built pipeline handed to your sales team packaged so they can close it.</p>
+        <p>Generally available — the plan, executed. A senior practitioner embedded in your team, with principal oversight — strategy and execution. Technical content, community programs, developer events, docs feedback loops, and the piece most programs miss: community-built pipeline handed to your sales team packaged so they can close it.</p>
         <p class="outcome"><strong>You walk away with:</strong> a full DevRel function at a fraction of the cost of building one.</p>
         <a class="svc-cta" href="#contact">Start with GA →</a>
       </article>
@@ -480,7 +495,7 @@ footer a:hover{text-decoration:underline}
             <div class="svc-meta">per event · standalone or add-on</div>
           </div>
         </div>
-        <p>Full production of hackathons, developer conferences, and innovation summits — challenge design aligned to sponsor goals, volunteer operations, and a post-event conversion playbook so the leads generated actually reach revenue. Built on events that drew 700+ registrations and put enterprise VPs in the room.</p>
+        <p>Full production of hackathons, developer conferences, and innovation summits — challenge design aligned to sponsor goals, volunteer operations, and a post-event conversion playbook so the leads generated actually reach revenue. Built on events that drew 1,000+ developers and put enterprise VPs in the room.</p>
         <p class="outcome"><strong>You walk away with:</strong> an event developers talk about — and a pipeline your sales team can work.</p>
         <a class="svc-cta" href="#contact">Plan an event →</a>
       </article>
@@ -503,9 +518,9 @@ footer a:hover{text-decoration:underline}
 </section>
 
 <!-- ===================== PROCESS ===================== -->
-<section class="section" id="process" aria-labelledby="proc-h">
+<section class="section" id="how-we-work" aria-labelledby="proc-h">
   <div class="wrap">
-    <span class="eyebrow">// how it works</span>
+    <span class="eyebrow">// how we work</span>
     <h2 id="proc-h">From intro call to shipped program in three moves.</h2>
     <div class="steps">
       <div class="step">
@@ -529,7 +544,7 @@ footer a:hover{text-decoration:underline}
 </section>
 
 <!-- ===================== COMMITMENTS ===================== -->
-<section class="section commit-section" id="commitments" aria-labelledby="com-h">
+<section class="section commit-section" id="our-commitments" aria-labelledby="com-h">
   <div class="wrap">
     <span class="eyebrow" style="color:#FCCC0A">// our commitments</span>
     <h2 id="com-h">Practitioner-owned, and it shows.</h2>
@@ -598,6 +613,7 @@ footer a:hover{text-decoration:underline}
       <p class="contact-line">based in → New York City · working everywhere</p>
       <p class="contact-line">next → a partner replies within one business day with times for a call</p>
       <p class="contact-line">founding cohort inquiries → mention "founding seat" in your message</p>
+      <p class="contact-line">practitioners → mention "bench" in your message</p>
     </div>
     <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" aria-label="Book an intro call">
       <input type="hidden" name="form-name" value="contact">
