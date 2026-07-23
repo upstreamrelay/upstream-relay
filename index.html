@@ -213,7 +213,7 @@ h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:700;margin-bottom:14px}
 .faq details p{padding:0 0 22px;font-size:.95rem;color:var(--ink-soft);max-width:62ch}
 
 /* ===== Founding cohort ===== */
-.cohort{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:44px;display:grid;grid-template-columns:1.5fr 1fr;gap:36px;align-items:start;border-left:10px solid var(--signal)}
+.cohort{background:var(--card);border:2px solid var(--signal);border-radius:16px;padding:44px;display:grid;grid-template-columns:1.5fr 1fr;gap:36px;align-items:start}
 .cohort h2{font-size:1.7rem}
 .cohort p{color:var(--ink-soft);font-size:.98rem}
 .cohort p.cohort-lede{font-weight:600;color:var(--ink);margin:14px 0 4px}
@@ -223,7 +223,8 @@ h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:700;margin-bottom:14px}
 .cohort-cols li{padding-left:22px;position:relative;font-size:.92rem;color:var(--ink-soft);margin-bottom:8px}
 .cohort-cols li::before{content:"→";position:absolute;left:0;color:var(--primary);font-weight:700}
 .cohort-cta{text-align:center;padding-top:8px}
-.cohort-cta .seats{font-family:var(--mono);font-size:.8rem;color:var(--ink-soft);display:block;margin-top:12px}
+.cohort-cta .seat-graphic{display:flex;justify-content:center;margin-top:16px}
+.cohort-cta .seats{font-family:var(--mono);font-size:.8rem;color:var(--ink-soft);display:block;margin-top:10px}
 
 /* ===== Contact ===== */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
@@ -374,7 +375,16 @@ footer a:hover{text-decoration:underline}
       </div>
       <div class="cohort-cta">
         <a class="btn btn-signal" href="#contact">Ask about a founding seat</a>
-        <span class="seats">// seats remaining: 5 of 5</span>
+        <div class="seat-graphic" role="img" aria-label="2 of 5 founding seats open">
+          <svg viewBox="0 0 168 20" width="168" height="20" aria-hidden="true">
+            <circle cx="10" cy="10" r="8" fill="#121212"/>
+            <circle cx="46" cy="10" r="8" fill="#121212"/>
+            <circle cx="82" cy="10" r="8" fill="#121212"/>
+            <circle cx="118" cy="10" r="8" fill="none" stroke="#121212" stroke-width="2.5"/>
+            <circle cx="154" cy="10" r="8" fill="none" stroke="#121212" stroke-width="2.5"/>
+          </svg>
+        </div>
+        <span class="seats">// seats remaining: 2 of 5</span>
       </div>
     </div>
   </div>
@@ -454,7 +464,7 @@ footer a:hover{text-decoration:underline}
           </div>
         </div>
         <p>Senior direction for your existing team: community architecture, content calendar, event and sponsorship strategy, ambassador program design. Your people execute; we set the course and review the work.</p>
-        <p class="outcome"><strong>You walk away with:</strong> a junior team performing like it has a senior lead — because it does.</p>
+        <p class="outcome"><strong>What you get:</strong> a junior team that performs like it has a senior lead, because it does.</p>
         <a class="svc-cta" href="#contact">Ask about Beta →</a>
       </article>
 
@@ -463,11 +473,11 @@ footer a:hover{text-decoration:underline}
           <span class="bullet g" aria-hidden="true">G</span>
           <div class="svc-title">
             <span class="svc-tag">03 · FLAGSHIP</span>
-            <h3>GA — Fractional DevRel<span class="flag-chip">MOST POPULAR</span></h3>
+            <h3>GA — Fractional DevRel<span class="flag-chip">FLAGSHIP</span></h3>
             <div class="svc-meta">monthly retainer · 2–3 day/week equivalent</div>
           </div>
         </div>
-        <p>Generally available — the plan, executed. A senior practitioner embedded in your team, with principal oversight — strategy and execution. Technical content, community programs, developer events, docs feedback loops, and the piece most programs miss: community-built pipeline handed to your sales team packaged so they can close it.</p>
+        <p>Generally available — the plan, executed. A senior practitioner embedded in your team, with principal oversight on the strategy and execution. Technical content, community programs, developer events, docs feedback loops, and the piece most programs miss: community-built pipeline handed to your sales team packaged so they can close it.</p>
         <p class="outcome"><strong>You walk away with:</strong> a full DevRel function at a fraction of the cost of building one.</p>
         <a class="svc-cta" href="#contact">Start with GA →</a>
       </article>
@@ -482,7 +492,7 @@ footer a:hover{text-decoration:underline}
           </div>
         </div>
         <p>A fractional head of DevRel plus execution support: full-function replacement for enterprises reinvesting after cuts, or later-stage startups that need a program running yesterday. Includes quarterly executive reporting built for leadership teams that need DevRel to be measurable.</p>
-        <p class="outcome"><strong>You walk away with:</strong> the org you would have hired, working in week three instead of month twelve.</p>
+        <p class="outcome"><strong>The result:</strong> the org you would have hired, working in week three instead of month twelve.</p>
         <a class="svc-cta" href="#contact">Talk through Scale →</a>
       </article>
 
@@ -510,7 +520,7 @@ footer a:hover{text-decoration:underline}
           </div>
         </div>
         <p>Executive advisory, DevRel hiring support, workshop delivery, and investor/foundation education on developer ecosystems. The right door when you're not ready for a retainer.</p>
-        <p class="outcome"><strong>You walk away with:</strong> senior judgment on demand, without a program commitment.</p>
+        <p class="outcome">Either way, you get senior judgment on demand, without a program commitment.</p>
         <a class="svc-cta" href="#contact">Book office hours →</a>
       </article>
     </div>
@@ -593,7 +603,7 @@ footer a:hover{text-decoration:underline}
     </details>
     <details>
       <summary>We're not ready for a retainer. Where do we start?</summary>
-      <p>Two doors: the RFC Strategy Sprint — a fixed-scope audit and roadmap — or Office Hours advisory. Both are built to earn the retainer, not assume it.</p>
+      <p>Two doors: the RFC Strategy Sprint (a fixed-scope audit and roadmap) or Office Hours advisory. Both are built to earn the retainer, not assume it.</p>
     </details>
     <details>
       <summary>Can you run just our event?</summary>
@@ -608,7 +618,7 @@ footer a:hover{text-decoration:underline}
     <div class="contact-info">
       <span class="eyebrow">// contact</span>
       <h2 id="con-h">Start with thirty minutes.</h2>
-      <p>Tell us where your developer motion stands. We'll tell you what we'd do first, what it costs, and whether we're the right fit — on the first call. We'll tell you which engagement fits — including the ones that aren't ours to sell you.</p>
+      <p>Tell us where your developer motion stands. We'll tell you what we'd do first, what it costs, and whether we're the right fit — on the first call. We'll tell you which engagement fits, including the ones that aren't ours to sell you.</p>
       <p class="contact-line">email → <a href="mailto:hello@upstreamrelay.com">hello@upstreamrelay.com</a></p>
       <p class="contact-line">based in → New York City · working everywhere</p>
       <p class="contact-line">next → a partner replies within one business day with times for a call</p>
